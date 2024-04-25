@@ -10,10 +10,16 @@
 
 html,
 body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'montserrat', -apple-system, sans-serif;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
@@ -55,4 +61,10 @@ p {
 .neue-b {
   font-family: 'neue-kabel', sans-serif;
   font-weight: 700;
+}
+
+@media screen and (max-width: 1230px) {
+  .container {
+    padding: 0 15px;
+  }
 }
