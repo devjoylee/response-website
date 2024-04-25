@@ -1,6 +1,8 @@
 @import url('https://use.typekit.net/doo2idm.css');
 
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,10 +22,37 @@ a {
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 ul {
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 100%;
+  font-weight: inherit;
+}
+
+.neue-r {
+  font-family: 'neue-kabel', sans-serif;
+  font-weight: 400;
+}
+
+.neue-m {
+  font-family: 'neue-kabel', sans-serif;
+  font-weight: 600;
+}
+
+.neue-b {
+  font-family: 'neue-kabel', sans-serif;
+  font-weight: 700;
 }
