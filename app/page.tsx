@@ -1,7 +1,9 @@
+import styles from './styles.module.css';
+
 export default function Home() {
   return (
-    <main>
-      <h1>Response Advertising</h1>
+    <main className={styles.pageContainer}>
+      <h3 className='neue-b'>Our work</h3>
     </main>
   );
 }
