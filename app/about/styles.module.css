@@ -1,6 +1,8 @@
 .aboutPage {
   padding: 100px 50px;
+}
 
+.container {
   & h2 {
     font-size: 1.8rem;
     line-height: 1.4;
