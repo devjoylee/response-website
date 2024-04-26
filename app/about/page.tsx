@@ -1,10 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './styles.module.css';
+import { Headline } from '../components';
 
 const AboutPage = () => {
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.aboutPage}>
+      <Headline
+        width={232}
+        first='The only about us page'
+        secondL='that’s'
+        typeStrings={['about you']}
+      />
+
       <h2>
         Our approach for all our clients has always been
         <br /> about <b>helping you solve a problem.</b>

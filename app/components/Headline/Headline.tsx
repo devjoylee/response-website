@@ -1,37 +1,38 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import styles from './styles.module.css';
+import Typewriter from 'typewriter-effect';
 
-const Headline = () => {
-  const pathname = usePathname();
+interface HeadlineProps {
+  first: string;
+  secondL?: string;
+  secondR?: string;
+  typeStrings?: string[];
+  width?: number;
+}
 
-  if (pathname === '/') {
-    return (
-      <h1 className={styles.headline}>
-        The return on <br />
-        <span className={`${styles.typingBox} neue-m`}>Inspiration</span> agency
-      </h1>
-    );
-  } else if (pathname === '/about') {
-    return (
-      <h1 className={styles.headline}>
-        The only about us page <br />
-        that’s&nbsp;
-        <span className={`${styles.typingBox} neue-m`}>about you</span>
-      </h1>
-    );
-  } else if (pathname === '/service') {
-    return (
-      <h1 className={styles.headline}>
-        Services handcrafted <br />
-        <span className={`${styles.typingBox} neue-m`}>for you</span>
-      </h1>
-    );
-  } else if (pathname === '/work') {
-    return <h1 className={styles.headline}>Our work</h1>;
-  }
+const Headline = ({ first, secondL, secondR, typeStrings, width }: HeadlineProps) => {
+  return (
+    <h1 className={styles.headline}>
+      {first}
+      <div className={styles.textWrapper}>
+        {secondL && <span>{secondL}&nbsp;</span>}
+        {typeStrings && (
+          <div className={`${styles.typingBox} neue-m`} style={{ width: width + 'px' }}>
+            <Typewriter
+              options={{
+                strings: typeStrings,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        )}
+        {secondR && <span>{secondR}</span>}
+      </div>
+    </h1>
+  );
 };
 
 export default Headline;

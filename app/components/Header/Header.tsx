@@ -15,8 +15,6 @@ const Header = () => {
         <Navbar />
         <SocialIcons />
       </div>
-
-      <Headline />
     </header>
   );
 };
