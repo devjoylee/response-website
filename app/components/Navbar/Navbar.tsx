@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './styles.module.css';
 import { usePathname } from 'next/navigation';
-import { log } from 'console';
 
 const navs = [
   { id: 0, name: 'About', url: '/about' },
