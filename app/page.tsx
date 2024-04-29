@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.homePage}>
+    <div className={`${styles.homePage} maxWidth`}>
       <Headline
         width={260}
         first='The return on'

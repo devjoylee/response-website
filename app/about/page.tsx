@@ -5,7 +5,7 @@ import { FadeMotion, Headline } from '../components';
 
 const AboutPage = () => {
   return (
-    <div className={styles.aboutPage}>
+    <div className={`${styles.aboutPage} maxWidth`}>
       <Headline
         width={232}
         first='The only about us page'

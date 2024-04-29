@@ -8,7 +8,7 @@ const ServicePage = () => {
     <div className={styles.servicePage}>
       <Headline width={185} first=' Services handcrafted' typeStrings={['for you']} />
 
-      <div className={styles.container}>
+      <div className='maxWidth'>
         {serviceList.map((item, i) => (
           <FadeMotion key={i}>
             <ServiceCard iconURL={item.iconURL} name={item.name} description={item.description} />
