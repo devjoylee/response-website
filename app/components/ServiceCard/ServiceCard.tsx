@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
 import styles from './styles.module.css';
 
 interface ServiceCardProps {
@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ iconURL, name, description }: ServiceCardProps) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.serviceCard}>
       <div className={styles.cardIcon}>
         <Image src={iconURL} alt={name} width={200} height={0} />
       </div>

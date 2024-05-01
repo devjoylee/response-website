@@ -1,12 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
 import styles from './styles.module.css';
-import { Headline } from '../components';
+import { FadeMotion, Headline, WorkCard } from '../components';
+import { workList } from './list';
 
 const WorkPage = () => {
   return (
     <div className={styles.workPage}>
       <Headline first='Our work' />
+      <div className='maxWidth'>
+        <section className={styles.workList}>
+          {workList.map((item, i) => (
+            <FadeMotion key={i}>
+              <WorkCard imageURL={item.imageURL} client={item.client} title={item.title} />
+            </FadeMotion>
+          ))}
+        </section>
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { FadeMotion, Headline, ServiceCard } from '../components';
-import { serviceList } from './service';
+import { serviceList } from './list';
 
 const ServicePage = () => {
   return (
