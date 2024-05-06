@@ -2,18 +2,27 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
-import { Navbar, SocialIcons, Headline } from '../../components';
+import { Navbar, SocialIcons } from '../../components';
 
-const Header = () => {
+interface HeaderProps {
+  isMain?: boolean;
+}
+
+const Header = ({ isMain }: HeaderProps) => {
   return (
-    <header className={styles.header}>
+    <header className={isMain ? styles.header_bg : styles.header_no_bg}>
       <div className={styles.container}>
         <Link href='/'>
-          <Image src='/assets/logo.svg' alt='response logo' width={200} height={0} />
+          <Image
+            src={isMain ? '/assets/logo-white.png' : '/assets/logo-color.png'}
+            alt='response logo'
+            width={200}
+            height={0}
+          />
         </Link>
 
         <Navbar />
-        <SocialIcons />
+        <SocialIcons whiteBG={isMain} />
       </div>
     </header>
   );

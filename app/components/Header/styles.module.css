@@ -1,10 +1,17 @@
-.header {
+.header_bg {
   padding: 50px 100px;
   height: 400px;
 
   background-image: url('./bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.header_no_bg {
+  padding: 50px 100px;
+  & * {
+    color: #000;
+  }
 }
 
 .container {
