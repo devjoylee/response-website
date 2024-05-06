@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body>
         <Header isMain={false} />
-        <main>{children}</main>
+        <main className='maxWidth'>{children}</main>
         <Footer />
       </body>
     </html>
