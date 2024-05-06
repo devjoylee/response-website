@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styles from './styles.module.css';
-import { SocialIcons } from '../../components';
+import { SocialIcons } from '@/app/components';
 
 const Footer = () => {
   return (

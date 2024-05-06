@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { FadeMotion, Headline, ServiceCard } from '../../components';
+import { FadeMotion, Headline, ServiceCard } from '@/app/components';
 import { serviceList } from './list';
 
 const ServicePage = () => {

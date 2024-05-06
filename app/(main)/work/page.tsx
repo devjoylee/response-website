@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './styles.module.css';
-import { FadeMotion, Headline, WorkCard } from '../../components';
+import { FadeMotion, Headline, WorkCard } from '@/app/components';
 import { workList } from './list';
 
 const WorkPage = () => {
@@ -11,7 +12,9 @@ const WorkPage = () => {
         <section className={styles.workList}>
           {workList.map((item, i) => (
             <FadeMotion key={i}>
-              <WorkCard imageURL={item.imageURL} client={item.client} title={item.title} />
+              <Link href={item.likeTo} key={i}>
+                <WorkCard imageURL={item.imageURL} client={item.client} title={item.title} />
+              </Link>
             </FadeMotion>
           ))}
         </section>
