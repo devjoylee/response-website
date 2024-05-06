@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <ul className={styles.container}>
         <li>
-          <Image src='/assets/logo-notext.png' alt='response logo' width={50} height={0} />
+          <Image src='/logo/logo-notext.png' alt='response logo' width={50} height={0} />
         </li>
         <li className={styles.email}>
           <p>Email</p> contact@responseadvertising.ca

@@ -38,7 +38,7 @@ const AboutPage = () => {
         </FadeMotion>
 
         <FadeMotion>
-          <Image src='/assets/image01.jpg' alt='image' width={3000} height={0} />
+          <Image src='/assets/about.jpg' alt='image' width={3000} height={0} />
         </FadeMotion>
 
         <FadeMotion>

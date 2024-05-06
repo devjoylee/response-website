@@ -14,7 +14,7 @@ const Header = ({ isMain }: HeaderProps) => {
       <div className={styles.container}>
         <Link href='/'>
           <Image
-            src={isMain ? '/assets/logo-white.png' : '/assets/logo-color.png'}
+            src={isMain ? '/logo/logo-white.png' : '/logo/logo-color.png'}
             alt='response logo'
             width={200}
             height={0}

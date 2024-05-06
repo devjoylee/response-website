@@ -1,6 +1,6 @@
 export const serviceList = [
   {
-    iconURL: '/icon/service01.png',
+    iconURL: '/assets/service01.png',
     name: 'Strategy',
     description: (
       <p>
@@ -12,7 +12,7 @@ export const serviceList = [
     ),
   },
   {
-    iconURL: '/icon/service02.png',
+    iconURL: '/assets/service02.png',
     name: 'Media',
     description: (
       <>
@@ -33,7 +33,7 @@ export const serviceList = [
     ),
   },
   {
-    iconURL: '/icon/service03.png',
+    iconURL: '/assets/service03.png',
     name: 'Creatives',
     description: (
       <p>
@@ -44,7 +44,7 @@ export const serviceList = [
     ),
   },
   {
-    iconURL: '/icon/service04.png',
+    iconURL: '/assets/service04.png',
     name: 'PR',
     description: (
       <p>
