@@ -1,6 +1,6 @@
-import './globals.css';
+import '../globals.css';
 import type { Metadata } from 'next';
-import { Header, Footer } from './components';
+import { Header, Footer } from '../components';
 
 export const metadata: Metadata = {
   title: 'Response Advertising',

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Headline } from './components';
+import { Headline } from '../components';
 import styles from './styles.module.css';
 import { workList } from './work/list';
 import Link from 'next/link';

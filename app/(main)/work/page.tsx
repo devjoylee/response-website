@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { FadeMotion, Headline, WorkCard } from '../components';
+import { FadeMotion, Headline, WorkCard } from '../../components';
 import { workList } from './list';
 
 const WorkPage = () => {
