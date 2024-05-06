@@ -5,3 +5,9 @@ export interface WorkType {
   client: string;
   title: string;
 }
+
+export interface ServiceType {
+  iconURL: string;
+  name: string;
+  description: JSX.Element;
+}

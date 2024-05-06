@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './styles.module.css';
 import { FadeMotion, Headline, WorkCard } from '@/app/components';
-import { workList } from './list';
+import { workData } from '@/app/data/work';
 
 const WorkPage = () => {
   return (
@@ -10,10 +10,10 @@ const WorkPage = () => {
       <Headline first='Our work' />
       <div className='maxWidth'>
         <section className={styles.workList}>
-          {workList.map((item, i) => (
+          {workData.map((work, i) => (
             <FadeMotion key={i}>
-              <Link href={item.likeTo} key={i}>
-                <WorkCard imageURL={item.imageURL} client={item.client} title={item.title} />
+              <Link href={work.likeTo} key={i}>
+                <WorkCard imageURL={work.imageURL} client={work.client} title={work.title} />
               </Link>
             </FadeMotion>
           ))}

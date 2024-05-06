@@ -1,6 +1,6 @@
 import { WorkType } from '@/app/types';
 
-export const workList: WorkType[] = [
+export const workData: WorkType[] = [
   {
     id: 0,
     likeTo: '/work00-vaisakhi',

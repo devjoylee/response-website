@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { FadeMotion, Headline, ServiceCard } from '@/app/components';
-import { serviceList } from './list';
+import { serviceData } from '@/app/data/service';
 
 const ServicePage = () => {
   return (
@@ -9,7 +9,7 @@ const ServicePage = () => {
       <Headline width={185} first=' Services handcrafted' typeStrings={['for you']} />
 
       <div className='maxWidth'>
-        {serviceList.map((item, i) => (
+        {serviceData.map((item, i) => (
           <FadeMotion key={i}>
             <ServiceCard iconURL={item.iconURL} name={item.name} description={item.description} />
           </FadeMotion>

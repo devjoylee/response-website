@@ -1,4 +1,6 @@
-export const serviceList = [
+import { ServiceType } from '@/app/types';
+
+export const serviceData: ServiceType[] = [
   {
     iconURL: '/assets/service01.png',
     name: 'Strategy',
