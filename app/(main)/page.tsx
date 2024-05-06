@@ -26,7 +26,7 @@ export default function Home() {
         <h3 className='neue-b maxWidth'>Our work</h3>
         <div className={styles.slider}>
           {workData.slice(0, 5).map((work, i) => (
-            <Link href={work.likeTo} key={i}>
+            <Link href={work.linkTo} key={i}>
               <Image src={work.imageURL} alt={work.title} width={500} height={0} />
               <div className={styles.overlay}>
                 <span>{work.client.toUpperCase()}</span>

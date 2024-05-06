@@ -12,7 +12,7 @@ const WorkPage = () => {
         <section className={styles.workList}>
           {workData.map((work, i) => (
             <FadeMotion key={i}>
-              <Link href={work.likeTo} key={i}>
+              <Link href={work.linkTo} key={i}>
                 <WorkCard imageURL={work.imageURL} client={work.client} title={work.title} />
               </Link>
             </FadeMotion>

@@ -1,6 +1,6 @@
 import '@/app/globals.css';
 import type { Metadata } from 'next';
-import { Header, Footer } from '@/app/components';
+import { Header, Footer, PreviousNext } from '@/app/components';
 
 export const metadata: Metadata = {
   title: 'Response Advertising',
@@ -12,7 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <body>
         <Header isMain={false} />
-        <main className='maxWidth'>{children}</main>
+        <main className='maxWidth'>
+          {children}
+          <PreviousNext />
+        </main>
         <Footer />
       </body>
     </html>

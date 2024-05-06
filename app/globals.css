@@ -49,6 +49,15 @@ p {
   font-weight: inherit;
 }
 
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .neue-r {
   font-family: 'neue-kabel', sans-serif;
   font-weight: 400;

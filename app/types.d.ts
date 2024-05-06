@@ -1,6 +1,6 @@
 export interface WorkType {
   id: number;
-  likeTo: string;
+  linkTo: string;
   imageURL: string;
   client: string;
   title: string;

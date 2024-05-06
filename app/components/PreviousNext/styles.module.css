@@ -1,0 +1,30 @@
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 130px;
+
+  & button a {
+    display: flex;
+    align-items: center;
+  }
+
+  & button:first-child img {
+    transform: rotateY(180deg);
+  }
+
+  & span {
+    margin: 0 13px;
+  }
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  background-color: #1bc0b7;
+  width: 45px;
+  height: 45px;
+  padding: 0 13px;
+}
