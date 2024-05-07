@@ -7,13 +7,18 @@ import img02 from './assets/img02.jpg';
 import img03 from './assets/img03.jpg';
 import img04 from './assets/img04.jpg';
 import preview from './assets/preview.gif';
+
 import { FadeMotion } from '@/app/components';
 
 const WorkDetailPage = () => {
   return (
     <section className={`${styles.subPage} ${styles.page00}`}>
       <FadeMotion>
-        <div className={styles.video}></div>
+        <div className={styles.video}>
+          <video autoPlay loop controls style={{ width: '100%', height: 'auto' }}>
+            <source src='/assets/video/00.mp4' />
+          </video>
+        </div>
         <div className={styles.title}>
           <span>TELUS</span>
           <h3>2019 Vaisakhi</h3>

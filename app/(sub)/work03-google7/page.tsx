@@ -9,7 +9,11 @@ const WorkDetailPage = () => {
   return (
     <section className={`${styles.subPage} ${styles.page03}`}>
       <FadeMotion>
-        <div className={styles.video}></div>
+        <div className={styles.video}>
+          <video autoPlay loop controls style={{ width: '100%', height: 'auto' }}>
+            <source src='/assets/video/03.mp4' />
+          </video>
+        </div>
         <div className={styles.title}>
           <span>TELUS</span>
           <h3>Google Pixel 7 Pro Diwali</h3>

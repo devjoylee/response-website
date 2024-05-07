@@ -6,7 +6,11 @@ const WorkDetailPage = () => {
   return (
     <section className={`${styles.subPage} ${styles.page01}`}>
       <FadeMotion>
-        <div className={styles.video}></div>
+        <div className={styles.video}>
+          <video autoPlay loop controls style={{ width: '100%', height: 'auto' }}>
+            <source src='/assets/video/01.mp4' />
+          </video>
+        </div>
         <div className={styles.title}>
           <span>TELUS</span>
           <h3>2022 Diwali</h3>
