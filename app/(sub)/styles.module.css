@@ -1,11 +1,11 @@
 .subPage {
-  padding: 40px 0 100px;
+  padding: 40px 20px 100px;
 }
 
 .video {
-  height: 500px;
-  background: #eee;
-  margin: 0 40px 80px;
+  height: auto;
+  background: #fafafa;
+  margin-bottom: 40px;
 }
 
 .title {
@@ -35,14 +35,14 @@
   & p + p {
     margin-top: 20px;
   }
-}
-
-.flex {
-  display: flex;
 
   & img {
     margin: 0 auto;
   }
+}
+
+.flex {
+  display: flex;
 }
 
 .flex30 {
@@ -63,13 +63,16 @@
   margin-top: -30px;
 }
 
-.page00 img[data-id='1'] {
-  margin-right: 30px;
-}
-
 .page00 img[data-id='1'],
 .page00 img[data-id='2'] {
   min-width: 0;
+  margin-right: 30px;
+  border: 1px solid #eaeaea;
+}
+
+.page00 img[data-id='3'],
+.page00 img[data-id='4'] {
+  width: 80%;
 }
 
 .page02 img,
@@ -79,4 +82,62 @@
 
 .page04 img {
   margin-top: -50px;
+}
+
+@media (max-width: 1000px) {
+  .subPage {
+    padding: 30px 15px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subPage {
+    padding-top: 10px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    & span {
+      font-size: 0.8em;
+    }
+    & h3 {
+      font-size: 1.2em;
+    }
+  }
+
+  .description {
+    & h4 {
+      font-size: 1.1em;
+    }
+
+    & > div + div {
+      margin-top: 25px;
+    }
+
+    & p + p {
+      margin-top: 15px;
+    }
+  }
+  .flex {
+    flex-direction: column;
+  }
+
+  /* page custom css */
+  .page00 img[data-id='0'],
+  .page04 img {
+    margin-top: 10px;
+  }
+  .page00 img[data-id='1'],
+  .page00 img[data-id='2'] {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+  .page00 img[data-id='3'],
+  .page00 img[data-id='4'] {
+    width: 100%;
+  }
+  .page02 img,
+  .page03 img {
+    margin-top: 0;
+  }
 }

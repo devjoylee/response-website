@@ -12,7 +12,7 @@ const Footer = () => {
         </li>
         <li className={styles.email}>
           <p>Email</p> contact@responseadvertising.ca
-          <SocialIcons />
+          <SocialIcons whiteBG />
         </li>
         <li>
           <p>Offices</p>

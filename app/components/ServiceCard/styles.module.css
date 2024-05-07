@@ -37,3 +37,24 @@
     font-weight: bold;
   }
 }
+
+@media (max-width: 768px) {
+  .serviceCard {
+    flex-direction: column;
+    padding: 40px 30px 30px;
+    margin-bottom: 30px;
+  }
+
+  .cardIcon {
+    margin: 0 auto 40px;
+    & img {
+      width: 90px;
+    }
+  }
+
+  .cardText {
+    & h3 {
+      font-size: 1.1em;
+    }
+  }
+}

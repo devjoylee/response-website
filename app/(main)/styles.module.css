@@ -1,6 +1,5 @@
 .homePage {
-  padding: 50px 50px;
-  height: 800px;
+  padding: 70px 50px 130px;
 
   & h3 {
     font-size: 1.3em;
@@ -65,5 +64,55 @@
   & p {
     font-size: 1.2em;
     font-weight: bold;
+  }
+}
+
+@media (max-width: 1000px) {
+  .homePage {
+    padding: 50px 30px 90px;
+  }
+  .slider {
+    gap: 10px;
+    & a {
+      height: 300px;
+    }
+  }
+  .overlay {
+    width: 500px;
+    padding: 15px;
+    & span {
+      font-size: 0.7em;
+    }
+    & p {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    padding: 40px 20px 60px;
+    & h3 {
+      font-size: 1.2em;
+      padding-bottom: 25px;
+    }
+  }
+  .slider {
+    flex-wrap: wrap;
+    gap: 20px;
+    & a,
+    & a:hover {
+      flex-basis: 100%;
+      height: 250px;
+    }
+  }
+
+  .overlay {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    & span {
+      margin: 0;
+    }
   }
 }

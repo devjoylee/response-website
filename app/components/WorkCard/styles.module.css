@@ -32,3 +32,14 @@
     transition: all 0.3s ease-in-out;
   }
 }
+
+@media (max-width: 768px) {
+  .workCard {
+    &:hover img {
+      transform: scale(1.12);
+    }
+  }
+  .thumbnail {
+    height: 200px;
+  }
+}

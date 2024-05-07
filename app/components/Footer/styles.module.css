@@ -22,8 +22,46 @@
 }
 
 .email {
-  margin-top: 5px;
   & ul {
     margin-top: 35px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    padding: 80px 30px;
+    height: auto;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 15px;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+
+    & > li + li {
+      margin-top: 30px;
+    }
+
+    & > li:first-child img {
+      margin: 0 auto;
+      width: 30px;
+    }
+
+    & > li:last-child p {
+      display: none;
+    }
+  }
+
+  .email {
+    & ul {
+      margin-top: 15px;
+      justify-content: center;
+    }
   }
 }
