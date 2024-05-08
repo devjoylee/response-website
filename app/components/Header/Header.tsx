@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
-import { Navbar, SocialIcons } from '@/app/components';
+import { Navbar } from '@/app/components';
 
 interface HeaderProps {
   isMain?: boolean;
@@ -22,8 +22,7 @@ const Header = ({ isMain }: HeaderProps) => {
           />
         </Link>
 
-        <Navbar />
-        <SocialIcons whiteBG={isMain} />
+        <Navbar isMain={isMain} />
       </div>
     </header>
   );
