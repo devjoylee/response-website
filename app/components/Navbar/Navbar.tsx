@@ -29,7 +29,7 @@ const Navbar = ({ isMain }: { isMain?: boolean }) => {
           ))}
         </ul>
 
-        <SocialIcons whiteBG={isMain} />
+        <SocialIcons whiteBG={isMain || isOpened} />
       </div>
 
       <button

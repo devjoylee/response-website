@@ -157,4 +157,11 @@
       width: 40px;
     }
   }
+  .open * {
+    color: #fff !important;
+    font-weight: bold;
+  }
+  .open + button span {
+    background: #fff;
+  }
 }

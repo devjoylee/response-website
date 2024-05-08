@@ -7,7 +7,7 @@ const WorkDetailPage = () => {
     <section className={`${styles.subPage} ${styles.page01}`}>
       <FadeMotion>
         <div className={styles.video}>
-          <video autoPlay loop controls style={{ width: '100%', height: 'auto' }}>
+          <video loop controls style={{ width: '100%', height: 'auto' }}>
             <source src='/assets/video/01.mp4' />
           </video>
         </div>
