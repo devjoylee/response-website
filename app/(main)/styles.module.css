@@ -1,6 +1,15 @@
 .homePage {
   padding: 70px 50px 130px;
 
+  /* headline */
+  & h1 {
+    font-size: 2.7em;
+    top: 230px;
+  }
+  & div[data-name='typeWriter'] {
+    height: 72px;
+    padding: 0 30px;
+  }
   & h3 {
     font-size: 1.3em;
     padding-bottom: 50px;
@@ -17,7 +26,7 @@
     display: flex;
     flex-basis: 20%;
     height: 500px;
-    border-radius: 20px;
+    border-radius: 3px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: all 0.7s ease-in-out;
     overflow: hidden;
@@ -70,6 +79,19 @@
 @media (max-width: 1000px) {
   .homePage {
     padding: 50px 30px 90px;
+
+    /* headline */
+    & h1 {
+      font-size: 2em;
+      top: 190px;
+    }
+
+    & div[data-name='typeWriter'] {
+      height: 50px;
+      width: 215px !important;
+      padding: 0 20px;
+      margin-right: 8px;
+    }
   }
   .slider {
     gap: 10px;
@@ -81,10 +103,10 @@
     width: 500px;
     padding: 15px;
     & span {
-      font-size: 0.7em;
+      font-size: 0.8em;
     }
     & p {
-      font-size: 1em;
+      font-size: 1.1em;
     }
   }
 }
@@ -92,11 +114,25 @@
 @media (max-width: 768px) {
   .homePage {
     padding: 40px 20px 60px;
+
+    /* headline */
+    & h1 {
+      font-size: 1.5em;
+      top: 135px;
+      left: 30px;
+    }
+    & div[data-name='typeWriter'] {
+      height: 45px;
+      width: 165px !important;
+      padding: 0 18px;
+      margin-right: 8px;
+    }
     & h3 {
-      font-size: 1.2em;
+      font-size: 1.3em;
       padding-bottom: 25px;
     }
   }
+
   .slider {
     flex-wrap: wrap;
     gap: 20px;

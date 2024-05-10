@@ -8,16 +8,20 @@ const AboutPage = () => {
     <div className={`${styles.aboutPage} maxWidth`}>
       <Headline
         width={232}
-        first='The only about us page'
-        secondL='that’s'
+        t1='The only about us page'
+        t2='that’s'
         typeStrings={['about you']}
+        hasLineBreak
       />
 
       <div className={styles.container}>
         <FadeMotion>
           <h2>
-            Our approach for all our clients has always been
-            <br /> about <b>helping you solve a problem.</b>
+            Our approach for all our clients has always been&nbsp;
+            <span className={styles.divider}>
+              <br />
+            </span>
+            about <b>helping you solve a problem.</b>
           </h2>
         </FadeMotion>
         <FadeMotion>

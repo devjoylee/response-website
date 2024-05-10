@@ -4,7 +4,7 @@
 }
 
 .header_bg {
-  height: 400px;
+  height: 500px;
   background-image: url('/assets/bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@
     padding: 50px;
   }
   .header_bg {
-    height: 370px;
+    height: 400px;
   }
 }
 

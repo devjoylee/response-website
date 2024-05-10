@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className={`${styles.homePage}`}>
       <Headline
-        width={260}
-        first='The return on'
+        width={310}
+        t1='The Return on'
         typeStrings={[
           'Investment',
           'Imagination',
@@ -19,7 +19,7 @@ export default function Home() {
           'Inspiration',
           'Integration',
         ]}
-        secondR='agency'
+        t3='agency'
       />
 
       <section className={styles.works}>
