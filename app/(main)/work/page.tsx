@@ -13,7 +13,12 @@ const WorkPage = () => {
           {workData.map((work, i) => (
             <FadeMotion key={i}>
               <Link href={work.linkTo} key={i}>
-                <WorkCard imageURL={work.imageURL} client={work.client} title={work.title} />
+                <WorkCard
+                  imageURL={work.imageURL}
+                  videoURL={work.videoURL}
+                  client={work.client}
+                  title={work.title}
+                />
               </Link>
             </FadeMotion>
           ))}

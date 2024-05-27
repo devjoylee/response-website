@@ -2,6 +2,7 @@ export interface WorkType {
   id: number;
   linkTo: string;
   imageURL: string;
+  videoURL: string;
   client: string;
   title: string;
 }
