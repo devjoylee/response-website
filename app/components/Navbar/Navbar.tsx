@@ -1,11 +1,10 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './styles.module.css';
 import SocialIcons from '../SocialIcons/SocialIcons';
 import { usePathname } from 'next/navigation';
-import FadeMotion from '../FadeMotion/FadeMotion';
 
 const navs = [
   { id: 0, name: 'About', url: '/about' },
