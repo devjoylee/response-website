@@ -27,7 +27,7 @@
   align-items: center;
   flex-wrap: wrap;
   border-radius: 50%;
-  background-color: #1bc0b7;
+  background-color: var(--green);
   width: 45px;
   height: 45px;
   padding: 0 13px;

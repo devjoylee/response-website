@@ -20,13 +20,11 @@
   display: flex;
   margin: 0 auto;
   max-width: 2000px;
-  gap: 20px;
 
   & a {
     display: flex;
     flex-basis: 20%;
     height: 500px;
-    border-radius: 3px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: all 0.7s ease-in-out;
     overflow: hidden;
@@ -94,7 +92,6 @@
     }
   }
   .slider {
-    gap: 10px;
     & a {
       height: 300px;
     }
@@ -135,7 +132,7 @@
 
   .slider {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     & a,
     & a:hover {
       flex-basis: 100%;

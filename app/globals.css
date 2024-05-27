@@ -1,5 +1,12 @@
 @import url('https://use.typekit.net/doo2idm.css');
 
+:root {
+  --green: #1bc0b7;
+  --blue: #2496d5;
+  --purple: #50129e;
+  --white-bg: #f7f7f7;
+}
+
 *,
 *:before,
 *:after {
@@ -88,7 +95,7 @@ button {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: linear-gradient(0deg, #4e11a4 0%, #47d7bd 100%);
+  background: linear-gradient(0deg, var(--purple) 0%, var(--green) 100%);
 }
 
 @media screen and (max-width: 1230px) {

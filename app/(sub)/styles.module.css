@@ -18,7 +18,7 @@
 
   & h3 {
     font-size: 1.3em;
-    color: #50129e;
+    color: var(--purple);
   }
 }
 

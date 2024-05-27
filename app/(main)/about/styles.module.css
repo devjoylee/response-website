@@ -8,7 +8,7 @@
     line-height: 1.4;
     letter-spacing: 0.8px;
     margin-bottom: 30px;
-    color: #50129e;
+    color: var(--purple);
   }
 
   & p {
@@ -16,7 +16,7 @@
   }
 
   & p b {
-    color: #50129e;
+    color: var(--purple);
   }
 
   & img {
