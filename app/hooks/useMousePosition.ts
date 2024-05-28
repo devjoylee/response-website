@@ -1,24 +1,24 @@
 import { useState, useEffect } from 'react';
 
 const useMousePosition = () => {
-  const [position, setPosition] = useState({ prevX: 0, prevY: 0 });
-  const [p, setP] = useState({ x: 500, y: 500 });
+  const [prevPosition, setPrevPosition] = useState({ x: 0, y: 0 });
+  const [currPosition, setCurrPosition] = useState({ x: 500, y: 500 });
 
   useEffect(() => {
     const cursor = document.querySelector<HTMLDivElement>('.cursor')!;
 
-    let curX = p.x;
-    let curY = p.y;
+    let cursorX = currPosition.x;
+    let cursorY = currPosition.y;
 
     const updateMousePosition = (e: MouseEvent) => {
-      setPosition({ prevX: e.clientX, prevY: e.clientY });
+      setPrevPosition({ x: e.clientX, y: e.clientY });
 
-      curX += (position.prevX - curX) / 20;
-      curY += (position.prevY - curY) / 20;
+      cursorX += (prevPosition.x - cursorX) / 20;
+      cursorY += (prevPosition.y - cursorY) / 20;
 
-      setP({ x: curX, y: curY });
+      setCurrPosition({ x: cursorX, y: cursorY });
 
-      cursor.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      cursor.style.transform = `translate(${Math.round(cursorX)}px, ${Math.round(cursorY)}px)`;
       cursor.style.opacity = '0.7';
 
       requestAnimationFrame(() => {
@@ -26,11 +26,12 @@ const useMousePosition = () => {
       });
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
-
-    return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-    };
+    if (window.innerWidth > 768) {
+      window.addEventListener('mousemove', updateMousePosition);
+      return () => {
+        window.removeEventListener('mousemove', updateMousePosition);
+      };
+    }
   });
 };
 

@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
 import { Navbar } from '@/app/components';
 import { usePathname } from 'next/navigation';
 
-import { gradient } from '@/app/utils/gradient';
 import useMousePosition from '@/app/hooks/useMousePosition';
 
 interface HeaderProps {
@@ -20,18 +19,6 @@ const Header = ({ isMain }: HeaderProps) => {
   const [currPosition, setCurrPosition] = useState({ x: 500, y: 500 });
 
   useMousePosition();
-  // useEffect(() => {
-  //   const cursor = document.querySelector<HTMLDivElement>('.cursor')!;
-
-  //   if (isMain) {
-  //     cursor.style.transform = `translate(${Math.round(currPosition.x)}px, ${Math.round(
-  //       currPosition.y
-  //     )}px)`;
-  //     cursor.style.opacity = '0.7';
-
-  //     gradient(prevPosition, setPrevPosition, currPosition, setCurrPosition);
-  //   }
-  // }, [prevPosition, currPosition, isMain]);
 
   return (
     <header
@@ -39,15 +26,6 @@ const Header = ({ isMain }: HeaderProps) => {
         pathname === '/' ? styles.full_height : ''
       }`}
     >
-      {/* {isMain && (
-        <>
-          <div className={styles.cursor} style={{ left: position.x, top: position.y }}></div>
-          <div className={styles.green}></div>
-          <div className={styles.blue}></div>
-          <div className={styles.purple}></div>
-        </>
-      )} */}
-
       <div className={styles.container}>
         <Link href='/'>
           <Image

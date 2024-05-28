@@ -94,13 +94,14 @@
 @media (max-width: 768px) {
   .tagline {
     flex-direction: column;
-    row-gap: 10px;
-    font-size: 2rem;
+    row-gap: 7px;
+    font-size: 1.9rem;
     margin-top: -10px;
+    padding: 0 20px;
   }
   .typingBox {
-    width: 225px;
-    height: 53px;
+    width: 210px;
+    height: 50px;
     padding: 0 25px;
     margin-right: 10px;
   }
