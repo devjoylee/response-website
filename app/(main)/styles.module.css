@@ -1,163 +1,110 @@
 .homePage {
-  height: 100vh;
   width: 100%;
+}
 
-  & > * {
-  }
+.tagline {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-wrap: nowrap;
+  font-size: 3.8rem;
+  color: #fff;
+  z-index: 100;
+}
 
-  /* headline */
-  & h1 {
-    font-size: 2.7em;
-    z-index: 100;
+.line2 {
+  display: flex;
+}
 
-    top: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+.typingBox {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px solid #fff;
+  border-radius: 80px;
+  margin-right: 23px;
+  width: 450px;
+  height: 100px;
+  padding: 0 42px;
+
+  & > div {
     position: absolute;
-  }
-
-  & div[data-name='typeWriter'] {
-    height: 72px;
-    padding: 0 30px;
+    margin-top: -4px;
   }
 }
 
-.slider {
-  display: flex;
-  margin: 0 auto;
-  width: 1000px;
-  gap: 5px;
+.linebreak {
+  display: none;
+}
 
-  top: 320px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-
-  & a {
-    display: flex;
-    flex-basis: 20%;
-    height: 400px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    transition: all 0.7s ease-in-out;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
+.workSection {
+  padding: 70px 20px 120px;
+  & h3 {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 0 auto 50px;
   }
+}
 
-  & a:hover {
-    flex-basis: 60%;
-
+@media (max-width: 1350px) {
+  .tagline {
+    font-size: 3.4rem;
+  }
+  .typingBox {
+    margin-right: 18px;
+    width: 400px;
+    height: 90px;
+    padding: 0 40px;
     & > div {
-      opacity: 1;
+      margin-top: -3px;
     }
   }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease-in-out;
+  .workSection {
+    & h3 {
+      max-width: 1000px;
+    }
   }
 }
 
-.overlay {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  color: #fff;
-  background-color: rgba(78, 17, 164, 0.5);
-  transition: opacity 0.6s ease;
-  width: 800px;
-  padding: 30px;
-
-  & span {
-    margin-top: auto;
-    font-size: 0.9em;
+@media (max-width: 1230px) {
+  .tagline {
+    font-size: 3.2rem;
   }
-
-  & p {
-    font-size: 1.2em;
-    font-weight: bold;
+  .typingBox {
+    width: 360px;
+    height: 78px;
+    & > div {
+      margin-top: 0;
+    }
   }
 }
 
 @media (max-width: 1000px) {
-  .homePage {
-    padding: 50px 30px 90px;
-
-    /* headline */
-    & h1 {
-      font-size: 2em;
-      top: 190px;
-    }
-
-    & div[data-name='typeWriter'] {
-      height: 50px;
-      width: 215px !important;
-      padding: 0 20px;
-      margin-right: 8px;
-    }
+  .tagline {
+    font-size: 2.5rem;
   }
-  .slider {
-    & a {
-      height: 300px;
-    }
-  }
-  .overlay {
-    width: 500px;
-    padding: 15px;
-    & span {
-      font-size: 0.8em;
-    }
-    & p {
-      font-size: 1.1em;
-    }
+  .typingBox {
+    width: 275px;
+    height: 60px;
+    padding: 0 30px;
   }
 }
 
 @media (max-width: 768px) {
-  .homePage {
-    padding: 40px 20px 60px;
-
-    /* headline */
-    & h1 {
-      font-size: 1.5em;
-      top: 135px;
-      left: 30px;
-    }
-    & div[data-name='typeWriter'] {
-      height: 45px;
-      width: 165px !important;
-      padding: 0 18px;
-      margin-right: 8px;
-    }
-    & h3 {
-      font-size: 1.3em;
-      padding-bottom: 25px;
-    }
+  .tagline {
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 2rem;
+    margin-top: -10px;
   }
-
-  .slider {
-    flex-wrap: wrap;
-    gap: 15px;
-    & a,
-    & a:hover {
-      flex-basis: 100%;
-      height: 250px;
-    }
+  .typingBox {
+    width: 225px;
+    height: 53px;
+    padding: 0 25px;
+    margin-right: 10px;
   }
-
-  .overlay {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    & span {
-      margin: 0;
-    }
+  .workSection {
+    padding: 50px 20px 80px;
   }
 }

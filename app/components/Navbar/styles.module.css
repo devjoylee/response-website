@@ -128,7 +128,6 @@
     background-image: url('/assets/bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 80%;
     overflow: hidden;
     z-index: 10;
   }

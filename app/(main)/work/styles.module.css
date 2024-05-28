@@ -1,6 +1,9 @@
 .workPage {
   padding: 80px 50px;
   background-color: var(--white-bg);
+  & h1 {
+    top: 235px;
+  }
 }
 
 .workList {
@@ -17,7 +20,7 @@
   .workPage {
     padding: 40px 20px;
     & h1 {
-      margin-top: 20px;
+      top: 200px;
     }
   }
 

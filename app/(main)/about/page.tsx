@@ -6,13 +6,7 @@ import { FadeMotion, Headline } from '@/app/components';
 const AboutPage = () => {
   return (
     <div className={`${styles.aboutPage} maxWidth`}>
-      <Headline
-        width={232}
-        t1='The only about us page'
-        t2='that’s'
-        typeStrings={['about you']}
-        hasLineBreak
-      />
+      <Headline width={235} t1='The only about us page' t2='that’s' typer='about you' />
 
       <div className={styles.container}>
         <FadeMotion>
