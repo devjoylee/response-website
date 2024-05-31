@@ -44,15 +44,9 @@ export default function Home() {
           <span>agency</span>
         </div>
       </section>
-      <div className={styles.temp} onClick={handleClick}>
-        <Image
-          src='https://github.com/devjoylee/response-website/assets/68415905/99740908-55e9-45a2-9193-a53246b1dab2'
-          // src='/icon/scroll.gif'
-          alt=''
-          width={70}
-          height={0}
-          className={styles.scrollIcon}
-        />
+
+      <div className={styles.scrollIcon} onClick={handleClick}>
+        <Image src='/icon/scroll.png' alt='' width={80} height={0} />
       </div>
 
       <section className={styles.workSection} ref={scrollRef}>

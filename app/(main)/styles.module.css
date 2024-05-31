@@ -34,22 +34,20 @@
   }
 }
 
-.temp {
-  display: flex;
+.scrollIcon {
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: 5%;
   transform: translateX(-50%);
-  opacity: 0.8;
+  background-color: transparent;
+  cursor: pointer;
   z-index: 100;
+  opacity: 0.8;
 
   & > img {
     object-fit: contain;
-    cursor: pointer;
+    background-color: transparent;
   }
-}
-
-.scrollIcon {
 }
 
 .workSection {
@@ -117,5 +115,8 @@
     & h3 {
       margin-bottom: 30px;
     }
+  }
+  .scrollIcon {
+    width: 60px;
   }
 }
