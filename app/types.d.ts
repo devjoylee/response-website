@@ -12,3 +12,10 @@ export interface ServiceType {
   name: string;
   description: JSX.Element;
 }
+
+export interface NavType {
+  id: number;
+  name: string;
+  url: string;
+  headline: JSX.Element;
+}

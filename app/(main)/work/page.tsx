@@ -7,7 +7,6 @@ import { workData } from '@/app/data/work';
 const WorkPage = () => {
   return (
     <div className={styles.workPage}>
-      <Headline t1='Our work' />
       <div className='maxWidth'>
         <section className={styles.workList}>
           {workData.map((work, i) => (

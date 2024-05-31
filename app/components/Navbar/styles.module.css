@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
 
 .navlist {
@@ -29,7 +30,6 @@
 }
 
 /* nav icon button */
-
 .navbtn {
   width: 30px;
   height: 22px;
@@ -113,9 +113,10 @@
 
 @media (max-width: 768px) {
   .navInner {
-    transform: translateX(1000px);
-    opacity: 0;
+    transform: scale(1.1);
+    visibility: hidden;
     display: flex;
+    opacity: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -125,17 +126,17 @@
     top: 0;
     bottom: 0;
     margin: 0 -2px;
-    transition: transform 1s ease, opacity 0.5s ease;
+    transition: all 0.2s ease-in;
     background-image: url('/assets/bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    z-index: 10;
   }
   .navInner.open {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
     touch-action: none;
+    visibility: visible;
   }
 
   .navlist {
@@ -143,16 +144,40 @@
     flex-direction: column;
     align-items: center;
     margin: 0;
+    opacity: 0.92;
+    gap: 30px;
   }
 
   .navlist li {
     font-size: 2rem;
+    position: relative;
+    padding-left: 10px;
+  }
+
+  .navlist li.active::before {
+    font-size: 2rem;
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('/logo/logo-notext.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .navlist li:hover,
+  .active {
+    box-shadow: none;
   }
 
   .navlist + ul {
     /* sns */
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 100px;
+    opacity: 0.9;
     & img {
       width: 40px;
     }

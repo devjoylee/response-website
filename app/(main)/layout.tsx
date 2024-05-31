@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en'>
       <body>
-        <Header isMain={true} />
+        <Header hasBG={true} />
         <main>{children}</main>
         <Footer />
       </body>

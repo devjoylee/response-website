@@ -1,6 +1,5 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './styles.module.css';
@@ -8,39 +7,35 @@ import { Navbar } from '@/app/components';
 import { usePathname } from 'next/navigation';
 
 import useMousePosition from '@/app/hooks/useMousePosition';
+import { navData } from '@/app/data/nav';
 
-interface HeaderProps {
-  isMain?: boolean;
-}
-
-const Header = ({ isMain }: HeaderProps) => {
+const Header = ({ hasBG }: { hasBG?: boolean }) => {
   const pathname = usePathname();
-  const [prevPosition, setPrevPosition] = useState({ x: 0, y: 0 });
-  const [currPosition, setCurrPosition] = useState({ x: 500, y: 500 });
+  const isHome = pathname === '/';
 
   useMousePosition();
 
   return (
     <header
-      className={`${isMain ? styles.header_bg : styles.header_no_bg} ${
-        pathname === '/' ? styles.full_height : ''
+      className={`${isHome ? styles.full_height : ''} ${
+        hasBG ? styles.header_bg : styles.header_no_bg
       }`}
     >
       <div className={styles.container}>
-        <Link href='/'>
+        <Link href='/' onClick={(e) => e.stopPropagation}>
           <Image
             className={styles.logo}
-            src={isMain ? '/logo/logo-white.png' : '/logo/logo-color.png'}
+            src={hasBG ? '/logo/logo-white.png' : '/logo/logo-color.png'}
             alt='response logo'
             width={180}
             height={0}
           />
         </Link>
 
-        <Navbar isMain={isMain} />
+        <Navbar hasBG={hasBG} navData={navData} />
       </div>
 
-      {isMain && (
+      {hasBG && (
         <div className={styles.gradient}>
           <svg xmlns='http://www.w3.org/2000/svg'>
             <defs>
@@ -66,6 +61,8 @@ const Header = ({ isMain }: HeaderProps) => {
           </div>
         </div>
       )}
+
+      {hasBG && !isHome && navData.filter((nav) => nav.url === pathname)[0].headline}
     </header>
   );
 };

@@ -3,16 +3,17 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './styles.module.css';
-import SocialIcons from '../SocialIcons/SocialIcons';
+
 import { usePathname } from 'next/navigation';
+import { NavType } from '@/app/types';
+import { SocialIcons } from '@/app/components';
 
-const navs = [
-  { id: 0, name: 'About', url: '/about' },
-  { id: 1, name: 'Services', url: '/service' },
-  { id: 2, name: 'Work', url: '/work' },
-];
+interface NavbarProps {
+  hasBG?: boolean;
+  navData: NavType[];
+}
 
-const Navbar = ({ isMain }: { isMain?: boolean }) => {
+const Navbar = ({ hasBG, navData }: NavbarProps) => {
   const pathname = usePathname();
   const [isOpened, setIsOpened] = useState(false);
 
@@ -27,14 +28,14 @@ const Navbar = ({ isMain }: { isMain?: boolean }) => {
     <div className={styles.nav}>
       <div className={`${styles.navInner} ${isOpened ? styles.open : ''}`} onClick={toggleNavbar}>
         <ul className={`${styles.navlist} neue-r`}>
-          {navs.map((nav) => (
+          {navData.map((nav) => (
             <li key={nav.id} className={pathname === nav.url ? styles.active : ''}>
               <Link href={nav.url}>{nav.name}</Link>
             </li>
           ))}
         </ul>
 
-        <SocialIcons whiteBG={isMain || isOpened} />
+        <SocialIcons whiteBG={hasBG || isOpened} />
       </div>
 
       <button

@@ -33,6 +33,11 @@
 }
 
 @media (max-width: 768px) {
+  .workPage {
+    & h1 {
+      top: 160px;
+    }
+  }
   .workList {
     & > div {
       flex-basis: 100%;
