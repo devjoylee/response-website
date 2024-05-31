@@ -8,3 +8,4 @@ export { default as ServiceCard } from './ServiceCard/ServiceCard';
 export { default as WorkCard } from './WorkCard/WorkCard';
 export { default as WorkGallery } from './WorkGallery/WorkGallery';
 export { default as PreviousNext } from './PreviousNext/PreviousNext';
+export { default as GradientBackground } from './GradientBackground/GradientBackground';
