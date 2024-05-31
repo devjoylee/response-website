@@ -1,26 +1,15 @@
 @import url('https://use.typekit.net/doo2idm.css');
 
-/* 
-  --g: rgb(27, 192, 183);
-  --b: rgb(36, 150, 213);
-  --p: rgb(80, 18, 158);
- */
-
 :root {
   --green: #1bc0b7;
   --blue: #2496d5;
   --purple: #50129e;
   --white-bg: #f7f7f7;
 
-  --g: rgb(22, 154, 147);
-  --b: rgb(15, 118, 174);
-  --p: rgb(140, 47, 255);
-  --c: rgb(140, 100, 255);
-
   --color-bg1: #50129e;
   --color-bg2: #2c035f;
   --color1: 27, 192, 183;
-  --color2: 22, 154, 147;
+  --color2: 40, 184, 176;
   --color3: 15, 118, 174;
   --color4: 36, 150, 213;
   --color5: 27, 192, 183;
@@ -48,18 +37,13 @@ body {
   background-color: #fff;
 }
 
-main {
-  position: relative;
-  z-index: 10;
-}
-
 .maxWidth {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .noScroll {
-  height: 100vh;
+  height: 100dvh;
   overflow-y: hidden;
 }
 

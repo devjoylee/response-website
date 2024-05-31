@@ -14,5 +14,5 @@ export const navData: NavType[] = [
     url: '/service',
     headline: <Headline width={185} t1='Services handcrafted' typer='for you' />,
   },
-  { id: 2, name: 'Work', url: '/work', headline: <Headline t1='Our work' /> },
+  { id: 2, name: 'Work', url: '/work', headline: <Headline t2='Our work' /> },
 ];

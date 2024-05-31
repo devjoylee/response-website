@@ -7,7 +7,6 @@
 .header_bg {
   height: 500px;
   position: relative;
-  overflow: hidden;
 }
 
 .header_no_bg {
@@ -20,7 +19,7 @@
 }
 
 .full_height {
-  height: 100vh !important;
+  height: 100dvh !important;
   position: absolute;
 }
 
@@ -58,6 +57,5 @@
   }
   .logo {
     width: 170px;
-    z-index: 100;
   }
 }

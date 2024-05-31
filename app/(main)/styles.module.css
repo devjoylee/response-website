@@ -3,7 +3,7 @@
 }
 
 .tagline {
-  height: 100vh;
+  height: 100dvh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -11,7 +11,6 @@
   text-wrap: nowrap;
   font-size: 3.4rem;
   color: #fff;
-  z-index: 99;
 }
 
 .line2 {
@@ -37,11 +36,10 @@
 .scrollIcon {
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  top: calc(100dvh - 120px);
   transform: translateX(-50%);
   background-color: transparent;
   cursor: pointer;
-  z-index: 100;
   opacity: 0.8;
 
   & > img {
