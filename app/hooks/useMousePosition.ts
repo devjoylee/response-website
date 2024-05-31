@@ -18,8 +18,10 @@ const useMousePosition = () => {
 
       setCurrPosition({ x: cursorX, y: cursorY });
 
-      cursor.style.transform = `translate(${Math.round(cursorX)}px, ${Math.round(cursorY)}px)`;
-      cursor.style.opacity = '0.7';
+      if (cursor) {
+        cursor.style.transform = `translate(${Math.round(cursorX)}px, ${Math.round(cursorY)}px)`;
+        cursor.style.opacity = '0.7';
+      }
 
       requestAnimationFrame(() => {
         updateMousePosition(e);

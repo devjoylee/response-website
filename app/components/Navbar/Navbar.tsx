@@ -15,9 +15,12 @@ const navs = [
 const Navbar = ({ isMain }: { isMain?: boolean }) => {
   const pathname = usePathname();
   const [isOpened, setIsOpened] = useState(false);
+
   const toggleNavbar = () => {
-    setIsOpened((o) => !o);
-    document.body.classList.toggle('noScroll');
+    if (window.innerWidth <= 768) {
+      setIsOpened((o) => !o);
+      document.body.classList.toggle('noScroll');
+    }
   };
 
   return (

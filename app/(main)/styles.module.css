@@ -9,9 +9,9 @@
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
-  font-size: 3.8rem;
+  font-size: 3.4rem;
   color: #fff;
-  z-index: 100;
+  z-index: 99;
 }
 
 .line2 {
@@ -24,18 +24,32 @@
   border: 1.5px solid #fff;
   border-radius: 80px;
   margin-right: 23px;
-  width: 450px;
-  height: 100px;
-  padding: 0 42px;
+  width: 400px;
+  height: 90px;
+  padding: 0 40px;
 
   & > div {
     position: absolute;
-    margin-top: -4px;
+    margin-top: -3px;
   }
 }
 
-.linebreak {
-  display: none;
+.temp {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  opacity: 0.8;
+  z-index: 100;
+
+  & > img {
+    object-fit: contain;
+    cursor: pointer;
+  }
+}
+
+.scrollIcon {
 }
 
 .workSection {
@@ -47,19 +61,7 @@
   }
 }
 
-@media (max-width: 1350px) {
-  .tagline {
-    font-size: 3.4rem;
-  }
-  .typingBox {
-    margin-right: 18px;
-    width: 400px;
-    height: 90px;
-    padding: 0 40px;
-    & > div {
-      margin-top: -3px;
-    }
-  }
+@media (max-width: 1300px) {
   .workSection {
     & h3 {
       max-width: 1000px;
@@ -88,6 +90,9 @@
     width: 275px;
     height: 60px;
     padding: 0 30px;
+    & > div {
+      margin-top: -2px;
+    }
   }
 }
 

@@ -32,7 +32,7 @@ const Header = ({ isMain }: HeaderProps) => {
             className={styles.logo}
             src={isMain ? '/logo/logo-white.png' : '/logo/logo-color.png'}
             alt='response logo'
-            width={200}
+            width={180}
             height={0}
           />
         </Link>
