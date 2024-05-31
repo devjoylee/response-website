@@ -12,7 +12,7 @@ const WorkGallery = ({ data }: WorkGalleryProps) => {
   return (
     <div className={styles.gallery}>
       {data.slice(0, 5).map((work, i) => (
-        <Link href={work.linkTo} key={i}>
+        <Link href={work.linkTo} key={i} onClick={(e) => e.stopPropagation}>
           <Image src={work.imageURL} alt={work.title} width={500} height={0} />
           <div className={styles.overlay}>
             <span>{work.client.toUpperCase()}</span>

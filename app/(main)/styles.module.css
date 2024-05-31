@@ -86,9 +86,6 @@
     width: 275px;
     height: 60px;
     padding: 0 30px;
-    & > div {
-      margin-top: -2px;
-    }
   }
 }
 
